@@ -33,4 +33,4 @@ jobs:
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ inputs.tags }}
       - name: Debug GitHub Event
-        run: echo "${{ github.event }}"
+        run: echo "${{ toJson(github.event) }}"
