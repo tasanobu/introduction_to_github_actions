@@ -32,4 +32,4 @@ jobs:
     steps:
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ inputs.tags }} 
-
+      - run: echo "github.event: ${{ github.event }}"
