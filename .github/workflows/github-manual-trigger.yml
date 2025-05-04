@@ -31,5 +31,6 @@ jobs:
     if: ${{ inputs.print_tags }} 
     steps:
       - name: Print the input tag to STDOUT
-        run: echo  The tags are ${{ inputs.tags }} 
-      - run: echo "github.event: ${{ github.event }}"
+        run: echo  The tags are ${{ inputs.tags }}
+      - name: Debug GitHub Event
+        run: echo "${{ github.event }}"
